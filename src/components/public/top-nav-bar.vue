@@ -79,6 +79,12 @@
     width: 100%;
   }
 
+  .close{
+    transform: rotate(90deg);
+    color: #EDEDED !important;
+    margin-top: 12px !important;
+  }
+
   .navbar-header{
     font-size: 24px;
     font-weight: 700;
