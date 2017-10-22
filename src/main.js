@@ -10,9 +10,10 @@ import Axios from 'axios'
 import font from './assets/lib/css/font-awesome.css'
 import './assets/lib/js/bootstrap.min.js'
 import './assets/lib/css/bootstrap.min.css'
-
+Vue.prototype.$ = $
 Vue.use(Vuex)
 Vue.prototype.$ajax = Axios
+
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */

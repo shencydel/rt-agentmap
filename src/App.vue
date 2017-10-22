@@ -2,7 +2,9 @@
 <div id="app">
   <top-nav-bar></top-nav-bar>
   <left-menu></left-menu>
-  <router-view />
+  <div class="mainContent col-md-10">
+    <router-view></router-view>
+  </div>
 </div>
 </template>
 
@@ -25,11 +27,21 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft YaHei','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.col-md-2,.col-md-12,.navbar-brand{
+  margin:0;
+  padding:0;
+}
+a {
+  cursor:pointer;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
 }
 </style>
