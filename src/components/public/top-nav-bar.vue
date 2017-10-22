@@ -12,7 +12,7 @@
               <i class="icon fa fa-globe"></i>  AGENT MAP
             </strong>
         </a>
-        <a id="sideNav" href="" >
+        <a id="sideNav" href="javascript:void(0)" @click="displayToggle">
           <i class="fa fa-bars icon"></i>
         </a>
     </div>
@@ -42,6 +42,25 @@
         user: {name:'admin'}
       }
     },
+    methods:{
+      displayToggle() {
+        $("#sideNav").toggle(
+        function(){
+          console.log("sss")
+          $('.navbar-side').animate({left: '-0px'});
+          $('#page-wrapper').animate({margin: '0, 0, 0, 260px'});
+        },
+        function() {
+                  console.log("ssse1s")
+          $('.navbar-side').animate({left: '-260px'});
+          $('#page-wrapper').animate({margin: '0px'}, "slow", function() {
+            $('#page-wrapper').css('margin', 'auto');
+          });
+          
+        }
+        );
+      }
+    },
     components: {
 
     }
@@ -51,7 +70,7 @@
 <style scoped>
   .navbar{
     background-color:black;
-    height: 70px;
+    height: 60px;
     z-index: inherit 300;
     margin-bottom:0;
     border: none;
@@ -67,10 +86,10 @@
     text-align: center;
   }
   .logo{
-    width: 265px;
+    width: 225px;
     color: #fff;
     text-align: left;
-    height: 70px;
+    height: 60px;
     font-size: 24px;
     font-weight: 700;
     line-height: 60px;
@@ -88,14 +107,14 @@
  }
  .navbar-right{
    display: block;
-   height: 70px;
+   height: 60px;
    margin-right: 10px;
  }
  .nav>li>a:focus, .nav>li>a:hover,.nav>li>a:visited{
    background-color:black;
  }
  .dropdown{
-   height: 70px;
+   height: 60px;
    line-height: 50px
  }
  .dropdown-user>li>a{

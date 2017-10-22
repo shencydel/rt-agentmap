@@ -2,8 +2,10 @@
 <div id="app">
   <top-nav-bar></top-nav-bar>
   <left-menu></left-menu>
-  <div class="mainContent col-md-10">
-    <router-view></router-view>
+  <div class="main-content-inner">
+    <div id="page-wrapper" class="mainContent">
+      <router-view></router-view>
+    </div>
   </div>
 </div>
 </template>
@@ -32,6 +34,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.mainContent{
+  margin-left:260px;
 }
 .col-md-2,.col-md-12,.navbar-brand{
   margin:0;

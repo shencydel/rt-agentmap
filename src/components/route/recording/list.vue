@@ -96,12 +96,6 @@
         e.preventDefault(); //此处禁止点击button后触发刷新页面事件
       }
     },
-    created: function() {
-      this.$ajax("http://localhost:3000/posts/").then(function(response) {
-        // console.log(response.data);
-        this.items = response.data
-      })
-    }
   }
 </script>
 
