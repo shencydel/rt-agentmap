@@ -4,14 +4,19 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
+import Bootstrap from 'bootstrap'
 import Vuex from 'vuex'
 import Axios from 'axios'
 
 import font from './assets/lib/css/font-awesome.css'
-import './assets/lib/js/bootstrap.min.js'
-import './assets/lib/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
-Vue.use(Vuex)
+import Multiselect from 'vue-multiselect'
+
+Vue.component('multiselect', Multiselect)
+// Vue.use(Vuex)
+// Vue.use(Bootstrap)
 Vue.prototype.$ajax = Axios
 
 Vue.config.productionTip = false
