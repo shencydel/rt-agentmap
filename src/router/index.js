@@ -8,12 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/list',
-      component: recording_list
-    },
-    {
-      path: '/list',
-      component: recording_list,
-      alias:'/'
+      component:recording_list,
     }
   ]
 })

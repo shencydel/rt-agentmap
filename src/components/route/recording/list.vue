@@ -137,4 +137,7 @@
     vertical-align: middle;
     padding: 5px;
   }
+  .panel-footer{
+    padding:0;
+  }
 </style>

@@ -56,7 +56,7 @@
           $('#page-wrapper').animate({margin: '0px'}, "slow", function() {
             $('#page-wrapper').css('margin', 'auto');
           });
-          
+
         }
         );
       }
@@ -75,6 +75,8 @@
     margin-bottom:0;
     border: none;
     border-radius: 0;
+    position: fixed;
+    width: 100%;
   }
 
   .navbar-header{
@@ -86,7 +88,7 @@
     text-align: center;
   }
   .logo{
-    width: 225px;
+    width: 260px;
     color: #fff;
     text-align: left;
     height: 60px;

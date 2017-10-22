@@ -1,5 +1,5 @@
 <template>
- <nav class="col-md-2 navbar-default navbar-side" role="navigation" style="left: 0px;z-index:2">
+ <nav class="navbar-default navbar-side" role="navigation" style="left: 0px;z-index:2;width:260px;">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li class="nav-header collapsed leftMenuRecoding " data-toggle="collapse" data-target=".dashboard-menu" aria-expanded="false">
@@ -23,11 +23,12 @@
  .navbar-default{
     background-color:#3E3E3E;
     min-height: 1000px;
+    position: fixed;
+    margin-top:60px;
   }
   .leftMenuRecoding{
     color:#B8B8B8;
     height: 54px;
-    margin-top:8px;
     line-height: 34px;
     font-size:16px;
     text-align: left;
