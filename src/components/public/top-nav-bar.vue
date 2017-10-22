@@ -1,45 +1,45 @@
 <template>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-left">
-        <a class="navbar-brand" href="#">
-          {{logo}}
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header col-md-3">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href=""class='navbar-brand' activeClass="navbar-brand">
+            <strong class="logo col-md-3">
+              <i class="icon fa fa-globe"></i>  AGENT MAP
+            </strong>
         </a>
-      </div>
-      <div id="sideSwitch" class="topSwitch">
-        <a><span class="fa fa-bars icon topIcon"></span></a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-right right-nav">
-          <ul class="user-login">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle user-login-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span class="glyphicon glyphicon-user"></span> user
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">LogOut</a>
-                </li>
-                <li>
-                  <a href="#">ChangeUser</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </form>
-      </div>
-      <!-- /.navbar-collapse -->
+        <a id="sideNav" href="" >
+          <i class="fa fa-bars icon"></i>
+        </a>
     </div>
-  </nav>
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                <i class="fa fa-user fa-fw"></i> {{user.name}} <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href='javascript:void(0)'>
+                        <i class="fa fa-sign-out fa-fw"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
 </template>
 
 <script>
   export default {
     name: 'topNavBar',
-    data() { //function data() {return {}}
+    data() {
       return {
-        logo: 'AgentMap'
+        user: {name:'admin'}
       }
     },
     components: {
@@ -49,58 +49,60 @@
 </script>
 
 <style scoped>
-  /* 顶部nav样式简单修改 */
-
-  .navbar-left {
-    margin-left: 75px;
-    width:150px;
-    height:50px;
+  .navbar{
+    background-color:black;
+    height: 70px;
+    z-index: inherit 300;
+    margin-bottom:0;
+    border: none;
+    border-radius: 0;
   }
 
-  .left-nav {
-    margin-left: 150px;
+  .navbar-header{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    margin:0;
+    padding:0;
+    text-align: center;
   }
-
-  .mouse-over-active:hover {
-    background-color: #3F3C3C;
+  .logo{
+    width: 265px;
+    color: #fff;
+    text-align: left;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    background: #F36A5A;
+    text-align: center;
   }
-
-  .right-nav {
-    width: 450px;
-  }
-
-  .right-search {
-    float: left
-  }
-
-  .user-login {
-    float: right;
-    margin-top: 8px;
-    margin-right: 30px;
-  }
-
-  .user-login-color {
-    color: #9d9d9d
-  }
-
-  .user-login-color:focus,
-  .user-login-color:hover {
-    color: white;
-    text-decoration: none;
-  }
-
-  .topSwitch {
-    display: inline-block;
-    float:left;
-    margin-top:16px;
-    margin-left:20px;
-    font-size: 18px;
-  }
-  .topIcon{
-    color:#9d9d9d;
-  }
-  .topIcon:hover{
-    color:white;
-  }
-
+ #sideNav{
+   display: inline-block;
+ }
+ .fa-bars{
+   color:#B8B8B8;
+ }
+ .fa-bars:hover{
+   color: #f36A5A
+ }
+ .navbar-right{
+   display: block;
+   height: 70px;
+   margin-right: 10px;
+ }
+ .nav>li>a:focus, .nav>li>a:hover,.nav>li>a:visited{
+   background-color:black;
+ }
+ .dropdown{
+   height: 70px;
+   line-height: 50px
+ }
+ .dropdown-user>li>a{
+   font-size: 14px;
+ }
+ .dropdown-toggle{
+   font-size:18px;
+   color:#f36A5A
+ }
 </style>

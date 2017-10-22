@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Recording from '@/components/route/Recording'
+import recording_list from '@/components/route/recording/list'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      component: Recording
+      path: '/list',
+      component: recording_list
+    },
+    {
+      path: '/list',
+      component: recording_list,
+      alias:'/'
     }
   ]
 })

@@ -19,6 +19,7 @@ Vue.component('multiselect', Multiselect)
 // Vue.use(Bootstrap)
 Vue.prototype.$ajax = Axios
 
+
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
