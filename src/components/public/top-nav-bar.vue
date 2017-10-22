@@ -37,6 +37,7 @@
 <script>
   export default {
     name: 'topNavBar',
+    showLeft:true, 
     data() {
       return {
         user: {name:'admin'}
@@ -44,21 +45,19 @@
     },
     methods:{
       displayToggle() {
-        $("#sideNav").toggle(
-        function(){
-          console.log("sss")
+        if(this.showLeft) {
           $('.navbar-side').animate({left: '-0px'});
-          $('#page-wrapper').animate({margin: '0, 0, 0, 260px'});
-        },
-        function() {
-                  console.log("ssse1s")
+          $('#page-wrapper').animate({margin: '0, 0, 0, 260px'});  
+          
+          this.showLeft = false;
+          return;
+        }else {
           $('.navbar-side').animate({left: '-260px'});
           $('#page-wrapper').animate({margin: '0px'}, "slow", function() {
             $('#page-wrapper').css('margin', 'auto');
-          });
-          
+          });  
+          this.showLeft = true;
         }
-        );
       }
     },
     components: {
