@@ -3,7 +3,7 @@
   <top-nav-bar></top-nav-bar>
   <left-menu></left-menu>
   <div class="main-content-inner">
-    <div id="page-wrapper" class="mainContent">
+    <div id="page-wrapper" class="mainContent col-md-12">
       <router-view></router-view>
     </div>
   </div>
@@ -35,13 +35,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.mainContent{
-  margin-left:260px;
+.main-content-inner{
+  margin:0 0 0 260px;
 }
 .col-md-2,.col-md-12,.navbar-brand{
   margin:0;
   padding:0;
 }
+.mainContent{
+  margin-top:60px!important;
+}
+
 a {
   cursor:pointer;
   text-decoration: none;
